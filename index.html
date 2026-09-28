@@ -122,7 +122,7 @@
                     <p class="text-content"><strong>Machine Learning & Modelos Predictivos:</strong> Implementación de modelos de gradient boosting (XGBoost) para regresión de variables complejas, con ingeniería de features geoespaciales como núcleo diferencial. Entrenamiento de redes LSTM para análisis multivariado de series temporales con componente espacial.</p>
                 </div>
                 <div style="margin-bottom: 1.8rem; padding-left: 1rem; border-left: 2px solid rgba(94, 234, 212, 0.3);">
-                    <p class="text-content"><strong>Deep Learning & Visión por Computador:</strong> Desarrollo de arquitecturas CNN multi-tarea combinando YOLOv8 para detección de objetos con ramas de regresión (ResNet) para estimación angular. Experiencia con Graph Neural Networks y autoencoders geoespaciales para análisis de grafos y detección de anomalías.</p>
+                    <p class="text-content"><strong>Deep Learning & Visión por Computador:</strong> Desarrollo de arquitecturas CNN multi-tarea que combinan detección orientada (YOLO OBB) con regresores ResNet para la estimación angular. Experiencia con Graph Neural Networks y autoencoders geoespaciales para análisis de grafos y detección de anomalías.</p>
                 </div>
                 <div style="margin-bottom: 1.8rem; padding-left: 1rem; border-left: 2px solid rgba(94, 234, 212, 0.3);">
                     <p class="text-content"><strong>Desarrollo Web & Integración de IA:</strong> Arquitecturas Fullstack con backend asíncrono en FastAPI (Python) y frontend interactivo en React (Vite), con integración de LLMs mediante Server-Sent Events para asesoramiento en tiempo real. Renderizado cartográfico avanzado con MapLibre GL JS y Leaflet.</p>
@@ -134,7 +134,7 @@
                     <p class="text-content"><strong>Teledetección & Análisis Espectral:</strong> Procesamiento de imágenes satelitales y aéreas (PNOA), modelado predictivo de índices espectrales (NDVI) y estudio de patrones de cobertura del suelo aplicados a agricultura de precisión y análisis ambiental.</p>
                 </div>
             </div>
-            <p class="text-content" style="padding-top: 1rem;">Actualmente en búsqueda activa de prácticas donde aplicar mis conocimientos técnicos y seguir creciendo en entornos reales.</p>
+            <p class="text-content" style="padding-top: 1rem;">Actualmente curso el Máster Universitario en Analítica de Negocio y Big Data en la Universidad de Alcalá y busco prácticas donde aplicar mis conocimientos técnicos en entornos reales.</p>
         </div>
 
         <hr>
@@ -169,6 +169,17 @@
         <!-- Formación -->
         <div class="section">
             <h3>Formación</h3>
+            <div class="card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"></path><path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"></path><path d="M18 5v17"></path><path d="M6 5v17"></path><circle cx="12" cy="9" r="2"></circle></svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Universidad de Alcalá</div>
+                    <div class="card-subtitle">Máster Universitario en Analítica de Negocio y Big Data</div>
+                    <div class="card-description">Programa de 60 ECTS en modalidad semipresencial.</div>
+                </div>
+                <span class="badge">2026 - Actualidad</span>
+            </div>
             <div class="card">
                 <div class="card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"></path><path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"></path><path d="M18 5v17"></path><path d="M6 5v17"></path><circle cx="12" cy="9" r="2"></circle></svg>
@@ -277,7 +288,7 @@
                 </div>
             </div>
 
-            <!-- 3. CNN Multi-tarea PNOA — NUEVO -->
+            <!-- 3. CNN Multi-tarea PNOA (TFG) -->
             <div class="card">
                 <div class="card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 12H3"/><path d="M21 12h-5"/><path d="M12 8V3"/><path d="M12 21v-5"/></svg>
@@ -286,12 +297,12 @@
                     <div class="card-title">CNN Multi-tarea — Detección de Vehículos y Estimación de Acimut</div>
                     <div class="card-subtitle">Deep Learning · Computer Vision · Teledetección · PNOA (IGN)</div>
                     <div class="card-description">
-                        <p>Desarrollo de un modelo de aprendizaje profundo <strong>multi-tarea basado en redes neuronales convolucionales (CNN)</strong> para la detección de vehículos y la estimación por regresión de su acimut a partir de datos del Plan Nacional de Ortofotografía Aérea (PNOA) del IGN.</p><br>
-                        <p>La arquitectura combina <strong>YOLOv8 para la detección y localización de vehículos</strong> sobre ortofotografías aéreas de alta resolución con una <strong>rama ResNet dedicada a la regresión angular continua</strong> para la estimación de la orientación en grados. Detección y regresión se resuelven en un único forward pass.</p><br>
-                        <p>Entrenado y evaluado sobre imágenes reales del PNOA, abordando los retos propios de la visión aérea: escala reducida, variabilidad de orientación y densidad variable de vehículos.</p>
+                        <p>Modelo de aprendizaje profundo <strong>multi-tarea basado en redes neuronales convolucionales (CNN)</strong> para la detección de vehículos y la estimación de su acimut sobre ortofotografía del Plan Nacional de Ortofotografía Aérea (PNOA) del IGN. Trabajo Fin de Grado desarrollado en el marco de la Cátedra IGN y CNIG-UPM.</p><br>
+                        <p>La arquitectura encadena dos etapas. Un detector <strong>YOLO26 con cajas orientadas (OBB)</strong> localiza los vehículos sobre teselas de 512×512 px. Cada detección se recorta y pasa a un <strong>regresor ResNet</strong> que estima el acimut mediante una salida seno/coseno. La inferencia incorpora votación espacial y el vector director de la vía para consolidar la orientación.</p><br>
+                        <p>Dataset de 8.000 teselas PNOA descargadas vía WMS. Resultados: <strong>mAP@50 = 0,992 y mAP@50-95 = 0,857</strong> en detección y <strong>MAE de 5,11°</strong> en la estimación de acimut.</p>
                     </div>
                     <div class="tags">
-                        <span class="tag">YOLOv8</span><span class="tag">ResNet</span><span class="tag">CNN Multi-tarea</span><span class="tag">Regresión Angular</span><span class="tag">PyTorch</span><span class="tag">PNOA / IGN</span><span class="tag">Computer Vision</span><span class="tag">Teledetección</span>
+                        <span class="tag">YOLO26 OBB</span><span class="tag">ResNet</span><span class="tag">CNN Multi-tarea</span><span class="tag">Regresión Angular</span><span class="tag">PyTorch</span><span class="tag">PNOA / IGN</span><span class="tag">Computer Vision</span><span class="tag">Teledetección</span>
                     </div>
                 </div>
                 <div class="project-images">
@@ -318,6 +329,7 @@
                 </div>
             </div>
 
+            <!-- 4. Anomalías migratorias -->
             <div class="card">
                 <div class="card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
@@ -326,9 +338,9 @@
                     <div class="card-title">Detección de Anomalías en Flujos Migratorios — EE.UU.</div>
                     <div class="card-subtitle">Graph Neural Network · Autoencoder Geoespacial · LSTM · XGBoost · Big Data</div>
                     <div class="card-description">
-                        <p>Análisis de flujos de migración interna en <strong>3.153 condados durante 11 periodos (2011–2021)</strong> sobre registros fiscales del IRS (Census Bureau). El objetivo: detectar anomalías históricas en los patrones de movilidad poblacional a escala nacional.</p><br>
+                        <p>Análisis de flujos de migración interna en <strong>3.109 condados durante 11 periodos (2011–2022)</strong>, con 296.749 flujos procedentes de registros fiscales del IRS. El objetivo: detectar anomalías históricas en los patrones de movilidad poblacional a escala nacional.</p><br>
                         <p>Se diseñó y comparó un conjunto de cuatro arquitecturas: <strong>autoencoders geoespaciales</strong> para compresión y reconstrucción de flujos, un <strong>motor de gravedad neuronal basado en Graph Neural Network</strong> que modela la atracción entre condados, <strong>LSTM con ventanas deslizantes de 3 años</strong> sobre 13 features económicas y temporales, y <strong>XGBoost</strong> como referencia de gradient boosting.</p><br>
-                        <p>El sistema identificó como anomalías por encima del umbral del 1% el impacto del <strong>huracán Harvey (2017)</strong> y el <strong>shock migratorio del COVID-19 (2020–2021)</strong>, validando la capacidad de los modelos para capturar disrupciones históricas reales.</p>
+                        <p>El sistema identificó como anomalías por encima del umbral del 1% el impacto del <strong>huracán Harvey (2017)</strong> y el <strong>shock migratorio del COVID-19</strong>, con una ratio de anomalías 4,8 veces superior en 2020, validando la capacidad de los modelos para capturar disrupciones históricas reales.</p>
                     </div>
                     <div class="tags">
                         <span class="tag">Graph Neural Network</span><span class="tag">Autoencoder Geoespacial</span><span class="tag">LSTM</span><span class="tag">XGBoost</span><span class="tag">PyTorch Geometric</span><span class="tag">GeoPandas</span><span class="tag">Big Data</span><span class="tag">Census Bureau / IRS</span>
