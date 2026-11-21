@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -37,5 +38,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Mientras Pages esté en modo "Deploy from a branch", GitHub lanza además su propio
+      # build del repo en bruto. Esperamos a que termine para que este despliegue sea el último.
+      - name: Esperar al build automático de GitHub Pages (si existe)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            pending=$(gh api "repos/${{ github.repository }}/actions/runs?head_sha=${{ github.sha }}&per_page=20" \
+              --jq '[.workflow_runs[] | select(.name == "pages build and deployment" and .status != "completed")] | length')
+            [ "$pending" = "0" ] && exit 0
+            sleep 5
+          done
       - id: deployment
         uses: actions/deploy-pages@v4
