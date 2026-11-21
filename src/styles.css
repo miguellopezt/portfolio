@@ -769,3 +769,21 @@ body { font-feature-settings: "ss01", "cv11"; letter-spacing: -0.006em; }
 .contact-actions { justify-content: flex-start; }
 .skip-link { top: -100px; transform: none; transition: top 0.2s; }
 .skip-link:focus { top: 0.75rem; }
+
+/* Retrato circular */
+.portrait { width: clamp(240px, 25vw, 330px); aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--border-strong); padding: 6px; background: rgba(255, 255, 255, 0.03); }
+.portrait picture, .portrait img { border-radius: 50%; object-position: 50% 25%; }
+.hero-grid { align-items: center; }
+
+/* Móvil: composición centrada sobre la foto */
+@media (max-width: 860px) {
+  .hero { padding-top: calc(var(--nav-h) + 1.75rem); }
+  .hero-copy { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .portrait { order: -1; justify-self: center; width: 156px; margin: 0 0 0.25rem; border-radius: 50%; padding: 4px; }
+  .hero-kicker { margin-bottom: 0.9rem; font-size: 0.88rem; }
+  .hero-title { font-size: clamp(2.4rem, 11vw, 3.4rem); margin-bottom: 1rem; }
+  .hero-lead { margin-inline: auto; margin-bottom: 1.75rem; }
+  .hero-actions { justify-content: center; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); text-align: center; margin-top: 3rem; }
+  .metric, .metric + .metric { padding: 1.5rem 0.5rem 0; }
+}
