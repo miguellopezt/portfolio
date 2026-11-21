@@ -14,7 +14,6 @@ import { Lightbox } from './shared/lightbox/lightbox';
     <a class="skip-link" href="#main">Saltar al contenido</a>
     <div class="bg" aria-hidden="true"></div>
     <app-topo-background />
-    <div class="cursor-glow" aria-hidden="true"></div>
     <app-nav />
     <main id="main"><router-outlet /></main>
     <app-footer />
@@ -28,16 +27,6 @@ export class App {
       const root = document.documentElement;
       // Dispara la coreografía de entrada del hero una vez hidratado
       requestAnimationFrame(() => root.classList.add('ready'));
-      // Halo que sigue al cursor (variables CSS, sin re-render)
-      window.addEventListener(
-        'pointermove',
-        (e) => {
-          if (e.pointerType !== 'mouse') return;
-          root.style.setProperty('--mx', `${e.clientX}px`);
-          root.style.setProperty('--my', `${e.clientY}px`);
-        },
-        { passive: true },
-      );
     });
   }
 }

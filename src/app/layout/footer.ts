@@ -7,7 +7,7 @@ import { PROFILE } from '../core/data/profile';
   template: `
     <footer class="footer">
       <div class="container">
-        <p>© {{ year }} {{ profile.name }} · <span class="mono">{{ profile.coords }}</span></p>
+        <p>© {{ year }} {{ profile.name }}</p>
         <div class="footer-links">
           <a [href]="profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
           <a [href]="profile.github" target="_blank" rel="noopener">GitHub</a>

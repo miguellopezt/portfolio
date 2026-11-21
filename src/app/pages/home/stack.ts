@@ -11,13 +11,12 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
     <section class="section" id="stack" aria-labelledby="stack-title">
       <div class="container">
         <header class="section-head" appReveal>
-          <span class="eyebrow">03 — Stack</span>
-          <h2 class="section-title" id="stack-title">Herramientas <span class="muted">de punta a punta.</span></h2>
+          <h2 class="section-title" id="stack-title">Tecnologías</h2>
         </header>
         <div class="stack-grid">
           @for (g of stack; track g.title; let i = $index) {
             <div class="stack-col spot" appSpotlight appReveal [revealIndex]="i">
-              <h3><span class="mono">{{ g.code }}</span>{{ g.title }}</h3>
+              <h3>{{ g.title }}</h3>
               <ul class="stack-list">
                 @for (it of g.items; track it.name) {
                   <li>

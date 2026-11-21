@@ -11,8 +11,7 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
     <section class="section" id="trayectoria" aria-labelledby="trayectoria-title">
       <div class="container">
         <header class="section-head" appReveal>
-          <span class="eyebrow">04 — Trayectoria</span>
-          <h2 class="section-title" id="trayectoria-title">Formación <span class="muted">y credenciales.</span></h2>
+          <h2 class="section-title" id="trayectoria-title">Formación</h2>
         </header>
 
         <div class="timeline-wrap">

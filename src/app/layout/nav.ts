@@ -7,10 +7,10 @@ import { PROFILE } from '../core/data/profile';
 import { Icon } from '../shared/icon/icon';
 
 export const NAV_SECTIONS = [
-  { id: 'perfil', label: 'Perfil' },
+  { id: 'perfil', label: 'Sobre mí' },
   { id: 'proyectos', label: 'Proyectos' },
-  { id: 'stack', label: 'Stack' },
-  { id: 'trayectoria', label: 'Trayectoria' },
+  { id: 'stack', label: 'Tecnologías' },
+  { id: 'trayectoria', label: 'Formación' },
   { id: 'contacto', label: 'Contacto' },
 ] as const;
 
@@ -23,7 +23,6 @@ export const NAV_SECTIONS = [
     <header class="nav" [class.is-scrolled]="scrolled()" [class.is-hidden]="hidden()" [class.is-open]="open()">
       <nav class="container" aria-label="Principal">
         <a class="brand" routerLink="/" (click)="open.set(false)" aria-label="Inicio">
-          <span class="brand-mark">{{ profile.initials }}</span>
           <span class="brand-name">{{ profile.shortName }}</span>
         </a>
         <ul class="nav-links" #list>

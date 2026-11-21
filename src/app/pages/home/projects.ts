@@ -15,9 +15,8 @@ import { ProjectGallery } from '../../shared/project-gallery';
     <section class="section" id="proyectos" aria-labelledby="proyectos-title">
       <div class="container">
         <header class="section-head" appReveal>
-          <span class="eyebrow">02 — Proyectos</span>
-          <h2 class="section-title" id="proyectos-title">Sistemas completos, <span class="muted">no solo notebooks.</span></h2>
-          <p class="section-lead">Cada proyecto recorre el ciclo entero: fuentes heterogéneas, ingeniería de features espaciales, modelos evaluados con métricas y, cuando aplica, un producto desplegado que cualquiera puede usar.</p>
+          <h2 class="section-title" id="proyectos-title">Proyectos</h2>
+          <p class="section-lead">Del pipeline de datos al modelo y, cuando aplica, a un producto en producción.</p>
         </header>
 
         <div class="projects">
@@ -25,7 +24,6 @@ import { ProjectGallery } from '../../shared/project-gallery';
             <article class="project" [attr.aria-labelledby]="'p-' + p.slug">
               <div class="project-info">
                 <div class="project-index" appReveal>
-                  <b>0{{ i + 1 }}</b><span>/ 0{{ featured.length }}</span>
                   @if (p.status === 'Producción') { <span class="badge-live">En producción</span> }
                   @else { <span class="chip">{{ p.status }}</span> }
                 </div>
@@ -59,8 +57,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
         </div>
 
         <div class="minor-head" appReveal>
-          <h3>Otros trabajos de análisis espacial</h3>
-          <span class="eyebrow">Location intelligence · Teledetección</span>
+          <h3>Otros trabajos</h3>
         </div>
         <div class="minor-grid">
           @for (p of secondary; track p.slug; let i = $index) {

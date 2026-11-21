@@ -11,9 +11,8 @@ import { Reveal } from '../../shared/motion/directives';
     <section class="section" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
         <div class="contact" appReveal="scale">
-          <span class="eyebrow">05 — Contacto</span>
-          <h2 id="contacto-title">¿Construimos algo<br />con tus datos?</h2>
-          <p>Busco prácticas en ingeniería de datos, GIS o Machine Learning. Si tu equipo trabaja con datos donde la ubicación importa, me encantará hablar.</p>
+          <h2 id="contacto-title">Contacto</h2>
+          <p>Busco prácticas en ingeniería de datos, GIS o Machine Learning. Si quieres hablar de un proyecto o una vacante, escríbeme.</p>
           <div class="contact-actions">
             <a class="btn" [href]="'mailto:' + p.email"><app-icon name="mail" /> Escríbeme</a>
             <button type="button" class="btn btn-ghost copy-btn" [class.is-copied]="copied()" (click)="copy()">

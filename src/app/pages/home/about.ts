@@ -11,8 +11,7 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
     <section class="section" id="perfil" aria-labelledby="perfil-title">
       <div class="container">
         <header class="section-head" appReveal>
-          <span class="eyebrow">01 — Perfil</span>
-          <h2 class="section-title" id="perfil-title">Del dato en bruto <span class="muted">al producto en producción.</span></h2>
+          <h2 class="section-title" id="perfil-title">Sobre mí</h2>
         </header>
 
         <div class="about-grid">
@@ -24,7 +23,7 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
           <figure class="quote spot" appSpotlight appReveal="right">
             <div class="quote-mark" aria-hidden="true">“</div>
             <blockquote>{{ about.quote }}</blockquote>
-            <figcaption>— Visión técnica</figcaption>
+            <figcaption>Visión técnica</figcaption>
             <div class="sectors" aria-label="Sectores de aplicación">
               @for (s of about.sectors; track s) { <span class="chip">{{ s }}</span> }
             </div>
@@ -34,7 +33,6 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
         <div class="domains">
           @for (d of domains; track d.title; let i = $index) {
             <article class="domain spot" appSpotlight appReveal [revealIndex]="i % 3">
-              <span class="num">0{{ i + 1 }}</span>
               <div class="domain-icon"><app-icon [name]="d.icon" /></div>
               <h3>{{ d.title }}</h3>
               <p>{{ d.text }}</p>
