@@ -1,0 +1,9 @@
+{
+  "name": "Miguel Alessandro López Tamagno — Portfolio",
+  "short_name": "M. López Tamagno",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#041416",
+  "theme_color": "#041416",
+  "icons": [{ "src": "img/avatar-384.webp", "sizes": "384x384", "type": "image/webp" }]
+}

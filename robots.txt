@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://miguellopezt.github.io/portafolio/sitemap.xml

@@ -1,0 +1,33 @@
+{
+  "name": "miguellopezt-portfolio",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build && node scripts/postbuild.mjs",
+    "build:dev": "ng build --configuration development",
+    "preview": "npx -y http-server dist/portfolio/browser -p 4300 -c-1 --proxy http://localhost:4300?",
+    "images": "python3 scripts/optimize_images.py"
+  },
+  "private": true,
+  "packageManager": "npm@10.9.9",
+  "dependencies": {
+    "@angular/common": "^22.3.0",
+    "@angular/compiler": "^22.3.0",
+    "@angular/core": "^22.3.0",
+    "@angular/forms": "^22.3.0",
+    "@angular/platform-browser": "^22.3.0",
+    "@angular/platform-server": "^22.3.0",
+    "@angular/router": "^22.3.0",
+    "@angular/ssr": "^22.3.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.3.0",
+    "@angular/cli": "^22.3.0",
+    "@angular/compiler-cli": "^22.3.0",
+    "@types/node": "^22.12.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2"
+  }
+}
