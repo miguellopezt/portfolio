@@ -55,15 +55,13 @@ import { ProjectGallery } from '../../shared/project-gallery';
           <div class="case-main">
             @if (p.context.length) {
               <section class="case-section" appReveal>
-                <span class="eyebrow">Contexto</span>
                 <h2>El problema</h2>
                 @for (c of p.context; track $index) { <p>{{ c }}</p> }
               </section>
             }
             @if (p.approach.length) {
               <section class="case-section">
-                <span class="eyebrow" appReveal>Enfoque</span>
-                <h2 appReveal>Cómo se resolvió</h2>
+                <h2 appReveal>Cómo lo hice</h2>
                 <ol class="steps">
                   @for (s of p.approach; track s.title; let i = $index) {
                     <li class="step spot" appSpotlight appReveal [revealIndex]="i % 2">
@@ -77,8 +75,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
             }
             @if (p.architecture) {
               <section class="case-section">
-                <span class="eyebrow" appReveal>Arquitectura</span>
-                <h2 appReveal>Capas del sistema</h2>
+                <h2 appReveal>Arquitectura</h2>
                 <div class="arch">
                   @for (l of p.architecture; track l.name; let i = $index) {
                     <div class="arch-layer" appReveal [revealIndex]="i">
@@ -91,8 +88,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
             }
             @if (p.results.length) {
               <section class="case-section" appReveal>
-                <span class="eyebrow">Resultados</span>
-                <h2>Qué se consiguió</h2>
+                <h2>Resultados</h2>
                 <ul class="facts results">
                   @for (r of p.results; track r) { <li><app-icon name="check" /><span>{{ r }}</span></li> }
                 </ul>
@@ -103,7 +99,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
 
         <nav class="container case-next" aria-label="Siguiente proyecto">
           <a class="next-card spot" appSpotlight [routerLink]="['/proyectos', next().slug]" appReveal>
-            <span class="eyebrow">Siguiente proyecto</span>
+            <span class="next-sub">Siguiente proyecto</span>
             <span class="next-title">{{ next().title }} <app-icon name="arrowRight" class="arrow" /></span>
             <span class="next-sub">{{ next().kicker }}</span>
           </a>
@@ -128,7 +124,7 @@ export class ProjectPage {
       if (!p) return;
       const path = `proyectos/${p.slug}`;
       this.seo.set({
-        title: `${p.title} — Caso de estudio | ${PROFILE.shortName}`,
+        title: `${p.title} · ${PROFILE.shortName}`,
         description: p.summary,
         path,
         type: 'article',

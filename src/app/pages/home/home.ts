@@ -24,7 +24,7 @@ import { Stack } from './stack';
 export class Home {
   constructor() {
     inject(SeoService).set({
-      title: `${PROFILE.name} | ${PROFILE.jobTitle}`,
+      title: `${PROFILE.name} · Datos geoespaciales y Machine Learning`,
       description: PROFILE.description,
       path: '',
       type: 'profile',

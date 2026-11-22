@@ -23,7 +23,7 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
           <figure class="quote spot" appSpotlight appReveal="right">
             <div class="quote-mark" aria-hidden="true">“</div>
             <blockquote>{{ about.quote }}</blockquote>
-            <figcaption>Visión técnica</figcaption>
+            <figcaption>{{ about.quoteLabel }}</figcaption>
             <div class="sectors" aria-label="Sectores de aplicación">
               @for (s of about.sectors; track s) { <span class="chip">{{ s }}</span> }
             </div>

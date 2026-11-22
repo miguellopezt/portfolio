@@ -16,7 +16,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
       <div class="container">
         <header class="section-head" appReveal>
           <h2 class="section-title" id="proyectos-title">Proyectos</h2>
-          <p class="section-lead">Del pipeline de datos al modelo y, cuando aplica, a un producto en producción.</p>
+          <p class="section-lead">Los cuatro proyectos en los que más he trabajado. Dos están en producción y se pueden probar.</p>
         </header>
 
         <div class="projects">
@@ -43,7 +43,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
                   @for (t of p.tags; track t) { <span class="chip">{{ t }}</span> }
                 </div>
                 <div class="project-links" appReveal [revealIndex]="5">
-                  <a class="btn btn-sm" [routerLink]="['/proyectos', p.slug]">Caso de estudio <app-icon name="arrowRight" class="arrow" /></a>
+                  <a class="btn btn-sm" [routerLink]="['/proyectos', p.slug]">Ver detalle <app-icon name="arrowRight" class="arrow" /></a>
                   @for (l of p.links; track l.url) {
                     <a class="btn btn-ghost btn-sm" [href]="l.url" target="_blank" rel="noopener">
                       <app-icon [name]="l.kind === 'repo' ? 'github' : 'arrowUpRight'" class="arrow" /> {{ l.label }}

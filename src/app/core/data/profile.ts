@@ -6,77 +6,77 @@ export const PROFILE = {
   name: 'Miguel Alessandro López Tamagno',
   shortName: 'Miguel López Tamagno',
   initials: 'ML',
-  role: 'Ingeniería Geoespacial & Big Data Analytics',
+  role: 'Datos geoespaciales · Machine Learning · Aplicaciones web',
   jobTitle: 'Spatial Data Engineer',
-  location: 'Torrejón de Ardoz, Madrid',
+  location: 'Madrid',
   coords: '40.4555° N · 3.4697° W',
   email: 'miguellopeztamagno@gmail.com',
   cv: 'data/cv_miguellopez.pdf',
   linkedin: 'https://www.linkedin.com/in/miguel-alessandro-lopez/',
   github: 'https://github.com/miguellopezt',
-  availability: 'Buscando prácticas · 2026',
-  /** Frases que rota el hero. */
-  focus: ['pipelines ETL geoespaciales', 'modelos predictivos', 'visión por computador', 'productos web con IA'],
+  availability: 'Buscando prácticas',
+  focus: [] as readonly string[],
   lead:
-    'Diseño y construyo sistemas de datos completos: desde la ingesta automatizada hasta modelos de Machine Learning y Deep Learning servidos en productos web en producción, con la componente espacial como variable de análisis.',
+    'Estudio Ingeniería Geoespacial en la UPM y el Máster en Big Data en la Universidad de Alcalá. Hago proyectos completos con datos espaciales: la ETL que recoge y cruza las fuentes, el modelo que saca algo útil de ellas y la aplicación web donde se usa. Dos de ellos están en producción.',
   description:
-    'Ingeniero en Tecnologías de la Información Geoespacial. Pipelines ETL, Machine Learning, Deep Learning y productos web con IA desplegados en producción.',
+    'Estudiante de Ingeniería Geoespacial (UPM) y del Máster en Big Data (UAH). ETL con datos espaciales, Machine Learning, visión por computador y aplicaciones web en producción.',
 } as const;
 
 export const HERO_METRICS: readonly (Kpi & { source: string })[] = [
-  { value: '70K+', label: 'registros catastrales servidos con inferencia en tiempo real', source: 'GradientEstate' },
-  { value: '0,992', label: 'mAP@50 en detección orientada de vehículos sobre PNOA', source: 'TFG · YOLO OBB' },
-  { value: '3.109', label: 'condados analizados en 11 periodos de flujos migratorios', source: 'GNN · Autoencoder' },
-  { value: '<50 ms', label: 'latencia de inferencia del modelo de valoración', source: 'XGBoost · FastAPI' },
+  { value: '70K+', label: 'registros catastrales consultables en la web de valoración', source: 'GradientEstate' },
+  { value: '<50 ms', label: 'por cada predicción del modelo de precios', source: 'GradientEstate · XGBoost' },
+  { value: '0,992', label: 'mAP@50 detectando vehículos en ortofoto PNOA', source: 'TFG · YOLO OBB' },
+  { value: '3.109', label: 'condados de EE. UU. en el análisis de migración', source: 'GNN · LSTM · XGBoost' },
 ];
 
 export const ABOUT = {
   paragraphs: [
-    'Ingeniero en Tecnologías de la Información Geoespacial con un perfil técnico amplio y orientado a producto. Mi trabajo abarca el <strong>ciclo de vida completo del dato</strong>: desde la ingesta automatizada mediante pipelines ETL hasta su explotación en modelos predictivos, sistemas de detección de objetos y productos web con IA integrada, desplegados en producción sobre infraestructura cloud.',
-    'Combino disciplinas que habitualmente viven separadas: ingeniería de datos geoespacial, Machine Learning clásico, Deep Learning aplicado a visión por computador, arquitecturas Fullstack asíncronas y análisis territorial avanzado con GIS. Cada proyecto es una oportunidad para profundizar en un área nueva sin abandonar el rigor en las anteriores.',
-    'Actualmente curso el <strong>Máster en Analítica de Negocio y Big Data</strong> en la Universidad de Alcalá y busco prácticas donde aplicar estos conocimientos en entornos reales.',
+    'Lo que más me interesa son los problemas en los que la ubicación cambia el resultado: el precio de un piso, la calidad del aire en una estación o la orientación de un coche en una foto aérea. Casi siempre empiezan igual: datos públicos repartidos en formatos y escalas distintas que hay que limpiar y cruzar antes de poder modelar nada.',
+    'Trabajo sobre todo en Python. Para los datos uso GeoPandas, PostGIS y ETL propias; para modelar, XGBoost si el problema es tabular, LSTM para series temporales y PyTorch para visión y grafos. Cuando el proyecto lo pide, hago la API con FastAPI, el frontend con React y MapLibre, y lo despliego en un servidor de Oracle Cloud con Nginx.',
+    'Estoy en el último curso del Grado en la UPM, curso el Máster en Analítica de Negocio y Big Data en la Universidad de Alcalá y busco prácticas en ingeniería de datos, GIS o Machine Learning.',
   ],
+  quoteLabel: 'Cómo trabajo',
   quote:
-    'La fase que más condiciona la calidad de cualquier sistema predictivo es la construcción del dataset de entrenamiento: la selección de variables, su tratamiento, sus interacciones y lo que cada una aporta realmente a la variable objetivo. Es el trabajo más determinante y el que suele pasar más desapercibido.',
-  sectors: ['Inmobiliario', 'Medio ambiente', 'Urbanismo', 'Agricultura', 'Demografía', 'Movilidad'],
+    'Lo que más condiciona un modelo predictivo es el dataset de entrenamiento: qué variables entran, cómo se tratan, cómo interactúan y qué aporta cada una a la variable objetivo. Es la parte que más tiempo me lleva y la que menos se ve.',
+  sectors: ['Vivienda', 'Medio ambiente', 'Urbanismo', 'Agricultura', 'Demografía', 'Movilidad'],
 };
 
 export const DOMAINS: readonly Domain[] = [
   {
-    title: 'Ingeniería de datos & Cloud',
+    title: 'Datos y ETL',
     icon: 'workflow',
-    text: 'Pipelines ETL automatizados en Python para extraer, transformar y unificar fuentes masivas en tiempo real. Despliegue en Oracle Cloud con Nginx como proxy inverso y workers para carga concurrente.',
+    text: 'Scripts en Python que descargan, limpian y unen fuentes públicas (Catastro, INE, MITECO, IRS, WMS del IGN) y las dejan listas para modelar en Parquet o PostGIS.',
   },
   {
-    title: 'Machine Learning predictivo',
+    title: 'Machine Learning',
     icon: 'chart',
-    text: 'Gradient boosting (XGBoost) para regresión de variables complejas, con la ingeniería de features geoespaciales como núcleo diferencial. Redes LSTM para series temporales multivariadas con componente espacial.',
+    text: 'XGBoost para regresión con muchas variables espaciales derivadas y LSTM para series temporales. Donde más tiempo pongo es en construir y validar las features.',
   },
   {
-    title: 'Deep Learning & Visión',
+    title: 'Visión por computador',
     icon: 'scan',
-    text: 'Arquitecturas CNN multi-tarea que combinan detección orientada (YOLO OBB) con regresores ResNet para estimación angular. Graph Neural Networks y autoencoders para grafos y detección de anomalías.',
+    text: 'Detección orientada con YOLO OBB y regresión de ángulos con ResNet sobre ortofoto PNOA. También he usado GNN y autoencoders para detectar anomalías en grafos.',
   },
   {
-    title: 'Fullstack & IA generativa',
+    title: 'Aplicaciones web',
     icon: 'code',
-    text: 'Backends asíncronos en FastAPI y frontends en React, con LLMs integrados mediante Server-Sent Events. Renderizado cartográfico avanzado con MapLibre GL JS y Leaflet.',
+    text: 'APIs con FastAPI, frontends en React con MapLibre GL JS o Leaflet y un asistente con LLM servido por SSE. Despliegue en Oracle Cloud con Nginx, Uvicorn y systemd.',
   },
   {
-    title: 'GIS & PostGIS',
+    title: 'GIS',
     icon: 'map',
-    text: 'ArcGIS Pro, QGIS y PostGIS, apoyados en el stack geoespacial de Python (GeoPandas, Shapely, Rasterio) para análisis territoriales complejos y capas espaciales enriquecidas.',
+    text: 'ArcGIS Pro, QGIS y PostGIS para análisis espacial; GeoPandas, Shapely y Rasterio cuando hay que automatizarlo o meterlo en un pipeline.',
   },
   {
     title: 'Teledetección',
     icon: 'satellite',
-    text: 'Procesamiento de imagen satelital y aérea (PNOA), modelado predictivo de índices espectrales (NDVI) y patrones de cobertura del suelo para agricultura de precisión y análisis ambiental.',
+    text: 'Imagen satelital y ortofoto PNOA: series de NDVI para seguir el estado de cultivos y análisis de cobertura del suelo.',
   },
 ];
 
 export const STACK: readonly StackGroup[] = [
   {
-    title: 'Datos & Cloud',
+    title: 'Datos y cloud',
     code: '01',
     items: [
       { name: 'Python', devicon: 'devicon-python-plain' },
@@ -88,7 +88,7 @@ export const STACK: readonly StackGroup[] = [
     ],
   },
   {
-    title: 'ML & Deep Learning',
+    title: 'ML y Deep Learning',
     code: '02',
     items: [
       { name: 'XGBoost', icon: 'grid' },
@@ -100,7 +100,7 @@ export const STACK: readonly StackGroup[] = [
     ],
   },
   {
-    title: 'GIS & Teledetección',
+    title: 'GIS y teledetección',
     code: '03',
     items: [
       { name: 'ArcGIS Pro · Online', icon: 'map' },
@@ -111,7 +111,7 @@ export const STACK: readonly StackGroup[] = [
     ],
   },
   {
-    title: 'Fullstack',
+    title: 'Web',
     code: '04',
     items: [
       { name: 'FastAPI', devicon: 'devicon-fastapi-plain' },
@@ -131,42 +131,42 @@ export const MARQUEE = [
 
 export const TIMELINE: readonly TimelineItem[] = [
   {
-    date: '2026 — Actualidad',
+    date: '2026 – actualidad',
     title: 'Máster Universitario en Analítica de Negocio y Big Data',
     org: 'Universidad de Alcalá',
-    text: 'Programa de 60 ECTS en modalidad semipresencial, orientado a analítica avanzada, Big Data y toma de decisiones basada en datos.',
+    text: '60 ECTS, semipresencial. Analítica avanzada y Big Data aplicados a la toma de decisiones.',
     chips: ['60 ECTS', 'Big Data', 'Business Analytics'],
   },
   {
-    date: '2022 — Actualidad',
+    date: '2022 – actualidad',
     title: 'Grado en Ingeniería en Tecnologías de la Información Geoespacial',
     org: 'Universidad Politécnica de Madrid',
-    text: 'Formación integral en Sistemas de Información Geográfica, Infraestructuras de Datos Espaciales, Big Data, ingeniería de datos, programación avanzada y algoritmia aplicada a problemas geográficos. Delegado de curso en 4º.',
-    chips: ['GIS', 'IDE', 'Big Data'],
+    text: 'SIG, infraestructuras de datos espaciales, Big Data, ingeniería de datos, programación y algoritmia aplicada a problemas geográficos. Delegado de 4º curso.',
+    chips: ['SIG', 'IDE', 'Big Data'],
   },
   {
     date: 'TFG',
-    title: 'CNN multi-tarea sobre ortofotografía PNOA',
-    org: 'Cátedra IGN y CNIG — UPM',
-    text: 'Detección de vehículos y estimación de su acimut con YOLO OBB + ResNet sobre 8.000 teselas del Plan Nacional de Ortofotografía Aérea.',
+    title: 'Detección de vehículos y acimut en ortofoto PNOA',
+    org: 'Cátedra IGN y CNIG · UPM',
+    text: 'YOLO OBB más un regresor ResNet sobre 8.000 teselas del PNOA para localizar vehículos y estimar su orientación.',
     chips: ['mAP@50 0,992', 'MAE 5,11°'],
   },
 ];
 
 export const SOFT_SKILLS = [
   {
-    title: 'Pensamiento analítico',
+    title: 'Análisis',
     img: 'img/icons/analitico.svg',
-    text: 'Descomponer problemas complejos de datos en soluciones lógicas, eficientes y escalables.',
+    text: 'Partir un problema de datos grande en piezas que se puedan resolver y comprobar una a una.',
   },
   {
-    title: 'Adaptabilidad y versatilidad',
+    title: 'Versatilidad',
     img: 'img/icons/adaptabilidad.svg',
-    text: 'Aplicar la ingeniería de datos a sectores diversos y aprender nuevas herramientas con rapidez.',
+    text: 'He aplicado lo mismo a vivienda, medio ambiente, urbanismo, agricultura y demografía.',
   },
   {
-    title: 'Innovación tecnológica',
+    title: 'Trabajo en equipo',
     img: 'img/icons/innovacion.svg',
-    text: 'Búsqueda proactiva de nuevas arquitecturas y metodologías para optimizar procesos tradicionales.',
+    text: 'Delegado de 4º curso en el Grado: represento a mis compañeros ante el profesorado.',
   },
 ] as const;
