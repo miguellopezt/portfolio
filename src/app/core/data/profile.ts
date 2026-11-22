@@ -14,12 +14,12 @@ export const PROFILE = {
   cv: 'data/cv_miguellopez.pdf',
   linkedin: 'https://www.linkedin.com/in/miguel-alessandro-lopez/',
   github: 'https://github.com/miguellopezt',
-  availability: 'Buscando prácticas',
+  availability: 'Ingeniero geoespacial · Buscando prácticas',
   focus: [] as readonly string[],
   lead:
-    'Estudio Ingeniería Geoespacial en la UPM y el Máster en Big Data en la Universidad de Alcalá. Hago proyectos completos con datos espaciales: la ETL que recoge y cruza las fuentes, el modelo que saca algo útil de ellas y la aplicación web donde se usa. Dos de ellos están en producción.',
+    'Soy ingeniero en Tecnologías de la Información Geoespacial por la UPM y curso el Máster en Analítica de Negocio y Big Data en la Universidad de Alcalá. Hago proyectos completos con datos espaciales: la ETL que recoge y cruza las fuentes, el modelo que saca algo útil de ellas y la aplicación web donde se usa. Dos de ellos están en producción.',
   description:
-    'Estudiante de Ingeniería Geoespacial (UPM) y del Máster en Big Data (UAH). ETL con datos espaciales, Machine Learning, visión por computador y aplicaciones web en producción.',
+    'Ingeniero en Tecnologías de la Información Geoespacial (UPM), cursando el Máster en Big Data (UAH). ETL con datos espaciales, Machine Learning, visión por computador y aplicaciones web en producción.',
 } as const;
 
 export const HERO_METRICS: readonly (Kpi & { source: string })[] = [
@@ -33,7 +33,7 @@ export const ABOUT = {
   paragraphs: [
     'Lo que más me interesa son los problemas en los que la ubicación cambia el resultado: el precio de un piso, la calidad del aire en una estación o la orientación de un coche en una foto aérea. Casi siempre empiezan igual: datos públicos repartidos en formatos y escalas distintas que hay que limpiar y cruzar antes de poder modelar nada.',
     'Trabajo sobre todo en Python. Para los datos uso GeoPandas, PostGIS y ETL propias; para modelar, XGBoost si el problema es tabular, LSTM para series temporales y PyTorch para visión y grafos. Cuando el proyecto lo pide, hago la API con FastAPI, el frontend con React y MapLibre, y lo despliego en un servidor de Oracle Cloud con Nginx.',
-    'Estoy en el último curso del Grado en la UPM, curso el Máster en Analítica de Negocio y Big Data en la Universidad de Alcalá y busco prácticas en ingeniería de datos, GIS o Machine Learning.',
+    'Me gradué en Ingeniería en Tecnologías de la Información Geoespacial en la UPM, con el TFG en la Cátedra IGN y CNIG. Ahora curso el Máster en Analítica de Negocio y Big Data en la Universidad de Alcalá y busco prácticas en ingeniería de datos, GIS o Machine Learning.',
   ],
   quoteLabel: 'Cómo trabajo',
   quote:
@@ -138,11 +138,11 @@ export const TIMELINE: readonly TimelineItem[] = [
     chips: ['60 ECTS', 'Big Data', 'Business Analytics'],
   },
   {
-    date: '2022 – actualidad',
+    date: '2022 – 2026',
     title: 'Grado en Ingeniería en Tecnologías de la Información Geoespacial',
     org: 'Universidad Politécnica de Madrid',
-    text: 'SIG, infraestructuras de datos espaciales, Big Data, ingeniería de datos, programación y algoritmia aplicada a problemas geográficos. Delegado de 4º curso.',
-    chips: ['SIG', 'IDE', 'Big Data'],
+    text: 'SIG, infraestructuras de datos espaciales, Big Data, ingeniería de datos, programación y algoritmia aplicada a problemas geográficos. Fui delegado de 4º curso.',
+    chips: ['Graduado', 'SIG', 'IDE', 'Big Data'],
   },
   {
     date: 'TFG',
@@ -167,6 +167,6 @@ export const SOFT_SKILLS = [
   {
     title: 'Trabajo en equipo',
     img: 'img/icons/innovacion.svg',
-    text: 'Delegado de 4º curso en el Grado: represento a mis compañeros ante el profesorado.',
+    text: 'Fui delegado de 4º curso en el Grado: hacía de enlace entre mis compañeros y el profesorado.',
   },
 ] as const;

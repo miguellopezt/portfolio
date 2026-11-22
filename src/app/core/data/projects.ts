@@ -106,7 +106,7 @@ export const PROJECTS: readonly Project[] = [
     icon: 'scan',
     featured: true,
     summary:
-      'Mi TFG en la Cátedra IGN y CNIG-UPM: detectar vehículos en ortofotos del PNOA y estimar hacia dónde apuntan, con YOLO OBB seguido de una ResNet.',
+      'Mi Trabajo Fin de Grado en la Cátedra IGN y CNIG-UPM: detectar vehículos en ortofotos del PNOA y estimar hacia dónde apuntan, con YOLO OBB seguido de una ResNet.',
     highlights: [
       'Mi Trabajo Fin de Grado, dentro de la Cátedra IGN y CNIG-UPM: detectar vehículos en las ortofotos del PNOA y estimar hacia dónde apunta cada uno (su acimut).',
       'Son dos redes en cadena. <strong>YOLO con cajas orientadas (OBB)</strong> detecta cada vehículo en teselas de 512×512 px; después una <strong>ResNet</strong> recibe el recorte y predice el ángulo como seno y coseno. Al final la orientación se ajusta con las detecciones vecinas y la dirección de la vía.',

@@ -78,6 +78,12 @@ export const personLd = () => ({
     { '@type': 'CollegeOrUniversity', name: 'Universidad Politécnica de Madrid' },
     { '@type': 'CollegeOrUniversity', name: 'Universidad de Alcalá' },
   ],
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'degree',
+    name: 'Grado en Ingeniería en Tecnologías de la Información Geoespacial',
+    recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Universidad Politécnica de Madrid' },
+  },
   knowsAbout: ['Geospatial data engineering', 'GIS', 'Machine Learning', 'Deep Learning', 'Computer Vision', 'Remote sensing', 'ETL', 'FastAPI', 'React'],
   knowsLanguage: ['es', 'en'],
   sameAs: [PROFILE.linkedin, PROFILE.github],

@@ -45,7 +45,7 @@ import { Reveal, Spotlight } from '../../shared/motion/directives';
               <h3>Más</h3>
               <ul class="facts">
                 <li><app-icon name="award" /><span><b>Certificado Aptis General — B2</b>British Council, nivel MCER B2.</span></li>
-                <li><app-icon name="users" /><span><b>Delegado de curso</b>4º del Grado en la UPM.</span></li>
+                <li><app-icon name="users" /><span><b>Delegado de curso</b>Fui delegado de 4º en el Grado (UPM).</span></li>
                 <li><app-icon name="car" /><span><b>Carnet B y vehículo propio</b>Disponibilidad total para desplazamientos.</span></li>
               </ul>
             </div>
