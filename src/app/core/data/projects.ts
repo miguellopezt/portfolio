@@ -72,7 +72,7 @@ export const PROJECTS: readonly Project[] = [
       { value: '3 niveles', label: 'España, provincia y municipio' },
     ],
     tags: ['Python', 'LSTM', 'TensorFlow', 'Pandas · GeoPandas', 'FastAPI', 'React', 'Leaflet', 'Oracle Cloud'],
-    links: [{ label: 'spain-aqi.ddns.net', url: 'https://spain-aqi.ddns.net/', kind: 'live' }],
+    links: [{ label: 'spainaqi.ddns.net', url: 'https://spainaqi.ddns.net/', kind: 'live' }],
     images: [
       { name: 'aire-1', alt: 'Mapa de calor del índice de calidad del aire sobre España con control temporal', caption: 'Vista nacional con mapa de calor' },
       { name: 'aire-2', alt: 'Panel provincial de Madrid con serie temporal del AQI, predicción y variables climáticas', caption: 'Provincia: serie histórica y predicción' },
