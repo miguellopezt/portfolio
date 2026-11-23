@@ -56,8 +56,8 @@ export const PROJECTS: readonly Project[] = [
   {
     slug: 'spain-aqi',
     title: 'Spain AQI',
-    kicker: 'Calidad del aire · ETL · LSTM · Web en producción',
-    status: 'Producción',
+    kicker: 'Calidad del aire · ETL · LSTM · Web en servicio',
+    status: 'En servicio',
     icon: 'cloud',
     featured: true,
     summary:
@@ -93,7 +93,7 @@ export const PROJECTS: readonly Project[] = [
       { name: 'Producto', items: ['FastAPI', 'React + Vite', 'Leaflet', 'Oracle Cloud + DNS público'] },
     ],
     results: [
-      'Visor público en producción con datos en tiempo real de toda España.',
+      'Visor público en servicio con datos en tiempo real de toda España.',
       'Histórico, meteorología y predicción en la misma vista.',
       'Navegación de España a provincia y a municipio.',
     ],

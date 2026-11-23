@@ -25,6 +25,7 @@ import { ProjectGallery } from '../../shared/project-gallery';
               <div class="project-info">
                 <div class="project-index" appReveal>
                   @if (p.status === 'Producción') { <span class="badge-live">En producción</span> }
+                  @else if (p.status === 'En servicio') { <span class="badge-live">En servicio</span> }
                   @else { <span class="chip">{{ p.status }}</span> }
                 </div>
                 <h3 [id]="'p-' + p.slug" appReveal [revealIndex]="1">{{ p.title }}</h3>

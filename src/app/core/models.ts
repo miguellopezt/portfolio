@@ -28,7 +28,7 @@ export interface Layer {
   readonly items: readonly string[];
 }
 
-export type ProjectStatus = 'Producción' | 'TFG' | 'Académico';
+export type ProjectStatus = 'Producción' | 'En servicio' | 'TFG' | 'Académico';
 
 export interface Project {
   readonly slug: string;
